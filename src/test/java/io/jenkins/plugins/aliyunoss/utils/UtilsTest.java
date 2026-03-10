@@ -2,15 +2,20 @@ package io.jenkins.plugins.aliyunoss.utils;
 
 import java.io.File;
 import java.util.Objects;
-import lombok.extern.java.Log;
+
+import java.util.logging.Logger;
+
 import org.junit.jupiter.api.Test;
+
 
 /**
  * @author Bruce.Wu
- * @date 2024-06-18
+ * @since 2024-06-18
  */
-@Log
-class UtilsTest {
+public class UtilsTest {
+
+    private static final Logger log = Logger.getLogger(UtilsTest.class.getName());
+
 
     @Test
     void testSplicePath() {

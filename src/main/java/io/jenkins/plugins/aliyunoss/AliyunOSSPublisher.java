@@ -24,8 +24,8 @@ import java.io.IOException;
 import java.util.Optional;
 import javax.servlet.ServletException;
 import jenkins.tasks.SimpleBuildStep;
-import lombok.Getter;
-import lombok.Setter;
+
+
 import org.apache.commons.lang.StringUtils;
 import org.jenkinsci.Symbol;
 import org.kohsuke.stapler.DataBoundConstructor;
@@ -37,8 +37,7 @@ import org.kohsuke.stapler.verb.POST;
  * @author Bruce.Wu
  * @date 2024-06-18
  */
-@Setter
-@Getter
+
 public class AliyunOSSPublisher extends Recorder implements SimpleBuildStep {
 
     private String ossId;
@@ -61,6 +60,30 @@ public class AliyunOSSPublisher extends Recorder implements SimpleBuildStep {
     public void setPathPrefix(String pathPrefix) {
         this.pathPrefix = pathPrefix;
     }
+    public String getOssId() {
+        return ossId;
+    }
+
+    public void setOssId(String ossId) {
+        this.ossId = ossId;
+    }
+
+    public String getIncludes() {
+        return includes;
+    }
+
+    public void setIncludes(String includes) {
+        this.includes = includes;
+    }
+
+    public String getExcludes() {
+        return excludes;
+    }
+
+    public String getPathPrefix() {
+        return pathPrefix;
+    }
+
 
     @Override
     public void perform(

@@ -11,18 +11,13 @@ import io.jenkins.plugins.aliyunoss.utils.Utils;
 import java.io.Serializable;
 import java.util.UUID;
 import jenkins.model.Jenkins;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
-import lombok.ToString;
+
+
 import org.apache.commons.lang.StringUtils;
 import org.kohsuke.stapler.DataBoundConstructor;
 import org.kohsuke.stapler.QueryParameter;
 
-@Setter
-@Getter
-@ToString
-@NoArgsConstructor
+
 public class AliyunOSSConfig implements Serializable, Describable<AliyunOSSConfig> {
 
     private static final long serialVersionUID = 1L;
@@ -61,6 +56,42 @@ public class AliyunOSSConfig implements Serializable, Describable<AliyunOSSConfi
             return null;
         }
         return secretKey.getPlainText();
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public String getEndpoint() {
+        return endpoint;
+    }
+
+    public void setEndpoint(String endpoint) {
+        this.endpoint = endpoint;
+    }
+
+    public String getBucket() {
+        return bucket;
+    }
+
+    public void setBucket(String bucket) {
+        this.bucket = bucket;
+    }
+
+    public String getAccessKey() {
+        return accessKey;
+    }
+
+    public void setAccessKey(String accessKey) {
+        this.accessKey = accessKey;
+    }
+
+    public String getBasePrefix() {
+        return basePrefix;
+    }
+
+    public void setBasePrefix(String basePrefix) {
+        this.basePrefix = basePrefix;
     }
 
     @Override
