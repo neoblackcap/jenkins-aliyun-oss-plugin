@@ -58,6 +58,13 @@ public class AliyunOSSClient {
                     ObjectMetadata meta = new ObjectMetadata();
                     meta.setContentLength(filePath.length());
                     String key = Utils.splicePath(parentPath, filePath.getName());
+                    logger.log("Uploading file: %s, ossPath: %s", filePath.getName(), key);
+
+                    if (key.startsWith("/")) {
+                        key = StringUtils.removeStart(key, "/");
+                        logger.log("Renamed oss object name: %s", key);
+                    }
+
                     client.putObject(ossConfig.getBucket(), key, is, meta);
                     logger.log("Uploaded file: %s, ossPath: %s", filePath.getName(), key);
                 }

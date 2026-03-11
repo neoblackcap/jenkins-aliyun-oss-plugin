@@ -33,8 +33,6 @@ import java.util.Optional;
 import javax.servlet.ServletException;
 import jenkins.MasterToSlaveFileCallable;
 import jenkins.tasks.SimpleBuildStep;
-
-
 import org.apache.commons.lang.StringUtils;
 import org.jenkinsci.Symbol;
 import org.kohsuke.stapler.DataBoundConstructor;
@@ -46,7 +44,6 @@ import org.kohsuke.stapler.verb.POST;
  * @author Bruce.Wu
  * @date 2024-06-18
  */
-
 public class AliyunOSSDownloader extends Builder implements SimpleBuildStep {
     /**
      * OSS ID
@@ -84,6 +81,7 @@ public class AliyunOSSDownloader extends Builder implements SimpleBuildStep {
     public void setStrict(boolean strict) {
         this.strict = strict;
     }
+
     public String getOssId() {
         return ossId;
     }
@@ -103,7 +101,6 @@ public class AliyunOSSDownloader extends Builder implements SimpleBuildStep {
     public boolean isStrict() {
         return strict;
     }
-
 
     @DataBoundSetter
     public void setLocation(String location) {

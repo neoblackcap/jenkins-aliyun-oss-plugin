@@ -2,11 +2,8 @@ package io.jenkins.plugins.aliyunoss.utils;
 
 import java.io.File;
 import java.util.Objects;
-
 import java.util.logging.Logger;
-
 import org.junit.jupiter.api.Test;
-
 
 /**
  * @author Bruce.Wu
@@ -15,7 +12,6 @@ import org.junit.jupiter.api.Test;
 public class UtilsTest {
 
     private static final Logger log = Logger.getLogger(UtilsTest.class.getName());
-
 
     @Test
     void testSplicePath() {

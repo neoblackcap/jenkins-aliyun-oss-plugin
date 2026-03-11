@@ -9,9 +9,7 @@ import java.util.List;
 import java.util.Optional;
 import jenkins.model.Jenkins;
 import net.sf.json.JSONObject;
-import org.kohsuke.stapler.DataBoundSetter;
 import org.kohsuke.stapler.StaplerRequest;
-
 
 @Extension
 public class AliyunOSSGlobalConfig extends Descriptor<AliyunOSSGlobalConfig>
@@ -35,14 +33,13 @@ public class AliyunOSSGlobalConfig extends Descriptor<AliyunOSSGlobalConfig>
         return Jenkins.get().getDescriptorByType(AliyunOSSGlobalConfig.class);
     }
 
-
     public List<AliyunOSSConfig> getConfigs() {
         return configs;
     }
+
     public void setConfigs(List<AliyunOSSConfig> configs) {
         this.configs = configs;
     }
-
 
     public Descriptor<AliyunOSSConfig> getAliyunOSSConfigDescriptor() {
         return Jenkins.get().getDescriptorByType(AliyunOSSConfig.AliyunOSSConfigDescriptor.class);

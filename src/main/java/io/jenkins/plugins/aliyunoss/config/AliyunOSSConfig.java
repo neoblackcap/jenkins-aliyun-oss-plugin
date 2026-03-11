@@ -11,12 +11,9 @@ import io.jenkins.plugins.aliyunoss.utils.Utils;
 import java.io.Serializable;
 import java.util.UUID;
 import jenkins.model.Jenkins;
-
-
 import org.apache.commons.lang.StringUtils;
 import org.kohsuke.stapler.DataBoundConstructor;
 import org.kohsuke.stapler.QueryParameter;
-
 
 public class AliyunOSSConfig implements Serializable, Describable<AliyunOSSConfig> {
 
